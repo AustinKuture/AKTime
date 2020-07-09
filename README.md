@@ -17,13 +17,13 @@ import time
 from aktime import TimeCalcu
 
 
-@TimeCalcu.time_cacu
+@TimeCalcu.time_calcu
 def time1():
 
     for i in range(10):
         time.sleep(0.1)
 
-@TimeCalcu.time_cacu
+@TimeCalcu.time_calcu
 def time2():
     for i in range(25):
         time.sleep(0.1)
@@ -35,7 +35,7 @@ def main():
 
 if __name__ == '__main__':
     main()
-    TimeCalcu.read_result()
+    TimeCalcu.statistic()
 ```
 
 **效果**

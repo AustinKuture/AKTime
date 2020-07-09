@@ -10,7 +10,6 @@
     
     @Copyright © 2020年 Mr.Li All rights reserved
 """
-import math
 import datetime
 import prettytable as pt
 from io import StringIO
@@ -50,15 +49,10 @@ def time_calcu(func):
     return wrapper
 
 
-# 标识字符
-def recognition(strs):
-    new_str = '{}_Kuture_0713'.format(strs)
-
-    return new_str
 
 # 读取统计结果
 @time_calcu
-def read_result(display=True):
+def time_statistic(display=True):
 
     print('\n')
     # 记录各方法耗时
@@ -105,3 +99,34 @@ def read_result(display=True):
 
     return sum(total_time)
 
+
+
+import time
+import numpy as np
+
+@time_calcu
+def time1():
+    time.sleep(0.1)
+    np.random.rand(1000*1000)
+
+@time_calcu
+def time2():
+    time.sleep(0.5)
+    np.random.rand(100)
+
+
+def main():
+    time1()
+    time2()
+    time2()
+    time2()
+    time1()
+# for i in range(2):
+#     time2()
+
+
+if __name__ == '__main__':
+
+
+    main()
+    # statistic_time()

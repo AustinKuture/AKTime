@@ -13,7 +13,7 @@ from setuptools import setup, find_packages
 
 setup(
     name = "aktime",
-    version = "0.1.1",
+    version = "0.1.2",
     keywords = ("pip", "aktime","TimeCalcu", "timetool", "kuture"),
     description = "Function time calculator",
     long_description = "用于程序运行时统计各函数的运行时间，使用时只需要导入aktime中的"
